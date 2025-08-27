@@ -13,8 +13,7 @@ const errors = ref({})
 
 const handleSubmit = async () => {
     try {
-        // const res = await api.post("/contact", form.value)
-        const res = await api.post("/contacts", form.value) // ✅ correct
+        const res = await api.post("/contacts", form.value) 
         success.value = res.data.message
         form.value = { name: "", email: "", message: "" }
         errors.value = {}
